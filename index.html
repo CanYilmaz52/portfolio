@@ -197,6 +197,66 @@
 
   .hero-links { display: flex; gap: 16px; }
 
+  /* HERO PHOTO */
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 64px;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-photo-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.hero-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  border: 2px solid rgba(0,229,255,0.25);
+  filter: grayscale(20%);
+  transition: filter 0.4s, border-color 0.4s;
+}
+
+.hero-photo:hover {
+  filter: grayscale(0%);
+  border-color: var(--accent);
+}
+
+.hero-photo-ring {
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,229,255,0.1);
+  animation: spin 12s linear infinite;
+}
+
+.hero-photo-ring::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-photo-wrap { display: flex; justify-content: center; order: -1; }
+  .hero-photo { width: 160px; height: 160px; }
+}
+
   .btn {
     display: inline-flex;
     align-items: center;
@@ -621,45 +681,54 @@
 <section id="hero">
   <div class="hero-glow"></div>
   <div class="hero-glow2"></div>
-  <div class="container">
-    <div class="hero-label">
-      <span data-tr>Can YILMAZ Portfolyo</span>
-      <span data-en>Can YILMAZ Portfolio</span>
-    </div>
-    <h1 class="hero-name">
-      <div>CAN</div>
-      <div class="line2">YILMAZ</div>
-    </h1>
-    <div class="hero-title">
-      <span data-tr>Bilgisayar Mühendisi </span>
-      <span data-en>Computer Engineer</span>
-    </div>
-    <p class="hero-desc" data-tr>
-      Gerçek zamanlı interaktif simülasyon sistemleri, otonom yazılım mimarileri ve algı tabanlı uygulamalar üzerine çalışıyorum. 
-      Çalışmalarım; oyun geliştirme, bilgisayarlı görü, makine öğrenimi ve yapay zeka pipeline tasarımları ile kontrol odaklı simülasyon teknolojilerini kapsamaktadır.
-    </p>
-    <p class="hero-desc" data-en>
-      I work on real-time interactive simulation systems, autonomous software architectures, and perception-based applications.
-      My work covers game development, computer vision, machine learning, AI pipeline design, and control-oriented simulation technologies.
-    </p>
-    <div class="hero-tags">
-      <span class="tag">Unity / C#</span>
-      <span class="tag">C++ / Python</span>
-      <span class="tag">YOLO / OpenCV</span>
-      <span class="tag">ArduPilot / PX4</span>
-      <span class="tag">MAVLink / GCS</span>
-      <span class="tag">HIL / SIL</span>
-      <span class="tag">FlightGear / JSBSim</span>
-    </div>
-    <div class="hero-links">
-      <a href="#projects" class="btn btn-primary">
-        <span data-tr>Projeleri Gör ↓</span>
-        <span data-en>View Projects ↓</span>
-      </a>
-      <a href="mailto:canyyilmaz552@gmail.com" class="btn btn-ghost">
-        <span data-tr>İletişime Geç</span>
-        <span data-en>Contact Me</span>
-      </a>
+<div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-label">
+          <span data-tr>Can YILMAZ Portfolyo</span>
+          <span data-en>Can YILMAZ Portfolio</span>
+        </div>
+        <h1 class="hero-name">
+          <div>CAN</div>
+          <div class="line2">YILMAZ</div>
+        </h1>
+        <div class="hero-title">
+          <span data-tr>Bilgisayar Mühendisi</span>
+          <span data-en>Computer Engineer</span>
+        </div>
+        <p class="hero-desc" data-tr>
+          Gerçek zamanlı interaktif simülasyon sistemleri, otonom yazılım mimarileri ve algı tabanlı uygulamalar üzerine çalışıyorum.
+          Çalışmalarım; oyun geliştirme, bilgisayarlı görü, makine öğrenimi ve yapay zeka pipeline tasarımları ile kontrol odaklı simülasyon teknolojilerini kapsamaktadır.
+        </p>
+        <p class="hero-desc" data-en>
+          I work on real-time interactive simulation systems, autonomous software architectures, and perception-based applications.
+          My work covers game development, computer vision, machine learning, AI pipeline design, and control-oriented simulation technologies.
+        </p>
+        <div class="hero-tags">
+          <span class="tag">Unity / C#</span>
+          <span class="tag">C++ / Python</span>
+          <span class="tag">YOLO / OpenCV</span>
+          <span class="tag">ArduPilot / PX4</span>
+          <span class="tag">MAVLink / GCS</span>
+          <span class="tag">HIL / SIL</span>
+          <span class="tag">FlightGear / JSBSim</span>
+        </div>
+        <div class="hero-links">
+          <a href="#projects" class="btn btn-primary">
+            <span data-tr>Projeleri Gör ↓</span>
+            <span data-en>View Projects ↓</span>
+          </a>
+          <a href="mailto:canyyilmaz552@gmail.com" class="btn btn-ghost">
+            <span data-tr>İletişime Geç</span>
+            <span data-en>Contact Me</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-ring"></div>
+        <img class="hero-photo" src="CanYILMAZ-vesikalik.jpeg" alt="Can YILMAZ">
+      </div>
     </div>
   </div>
 </section>
