@@ -346,6 +346,7 @@
   .icon-green { background: var(--accent3); }
   .icon-orange { background: #f59e0b; }
   .icon-pink { background: #ec4899; }
+  .icon-red { background: #ef4444; }
   .skill-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
   .skill-list li { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
   .skill-list li::before { content: ''; display: block; width: 4px; height: 1px; background: var(--border); }
@@ -817,6 +818,10 @@
         <a href="#gallery" data-en>Gallery</a>
       </li>
       <li>
+        <a href="#vision" data-tr>Vizyon</a>
+        <a href="#vision" data-en>Vision</a>
+      </li>
+      <li>
         <a href="#cv" data-tr>Özgeçmiş</a>
         <a href="#cv" data-en>Resume</a>
       </li> 
@@ -1200,9 +1205,21 @@
         <ul class="skill-list">
           <li><span data-tr>Unity motoru — oynanış sistemleri &amp; motor mantığı</span><span data-en>Unity engine — gameplay systems &amp; engine logic</span></li>
           <li><span data-tr>Shader Graph — özel materyal geliştirme</span><span data-en>Shader Graph — custom material development</span></li>
-          <li><span data-tr>Fizik entegrasyonu (WheelCollider, Particle System)</span><span data-en>Physics integration (WheelCollider, Particle System)</span></li>
+          <li><span data-tr>Fizik entegrasyonu</span><span data-en>Physics integration</span></li>
           <li><span data-tr>RenderTexture tabanlı dinamik sistemler</span><span data-en>RenderTexture-based dynamic systems</span></li>
           <li><span data-tr>Performans optimizasyonu ve profiling</span><span data-en>Performance optimization and profiling</span></li>
+        </ul>
+      </div>
+        <div class="skill-block fade-in" style="grid-column: 1 / -1;">
+        <div class="skill-block-title">
+          <div class="skill-block-icon icon-red"></div>
+          <span data-tr>Diller</span>
+          <span data-en>Languages</span>
+        </div>
+        <ul class="skill-list">
+          <li><span data-tr>İngilizce · B2</span><span data-en>English · B2</span></li>
+          <li><span data-tr>Almanca · A1</span><span data-en>German · A1</span></li>
+          <li><span data-tr>Çince · A1</span><span data-en>Chinese · A1</span></li>
         </ul>
       </div>
       <div class="skill-block fade-in" style="grid-column: 1 / -1;">
@@ -1220,39 +1237,38 @@
           <li>BeautifulSoup · Tkinter</li>
           <li>JADX-GUI · MS Office</li>
           <li>MissionPlanner · FlightGear</li>
-          <li><span data-tr>İngilizce B2 · Almanca A1</span><span data-en>English B2 · German A1</span></li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PHILOSOPHY -->
-<section id="philosophy">
+<!-- VISION -->
+<section id="vision">
   <div class="container">
     <div class="section-header fade-in">
       <span class="section-num">03</span>
       <h2 class="section-title">
-        <span data-tr>Felsefe</span>
-        <span data-en>Philosophy</span>
+        <span data-tr>Vizyon</span>
+        <span data-en>Vision</span>
       </h2>
       <div class="section-line"></div>
     </div>
     <div class="philosophy-grid">
       <div class="phil-card fade-in">
-        <div class="phil-label"><span data-tr>Performans</span><span data-en>Performance</span></div>
-        <p class="phil-text" data-tr>Zaman, gecikme ve zamanlama birinci sınıf tasarım kısıtlarıdır. Önce ölç, darboğazı optimize et, bütçeleri görünür tut.</p>
-        <p class="phil-text" data-en>Time, latency, and scheduling are first-class design constraints. Measure first, optimize the bottleneck, keep budgets visible.</p>
+        <div class="phil-label"><span data-tr>Amaç</span><span data-en>Purpose</span></div>
+        <p class="phil-text" data-tr>Zaman ve kaynak yönetimi benim için yalnızca teknik bir gereklilik değil, bir çalışma prensibi. Çocukluğumdan beri oyun oynarken hep “bu sistem nasıl çalışıyor?” sorusunu sordum. Bugün ise sadece anlamakla yetinmiyor, kendi sistemlerimi tasarlıyor ve fikirlerimi çalışan ürünlere dönüştürüyorum.</p>
+        <p class="phil-text" data-en>Time and resource management are not just technical requirements for me; they are core working principles. Since childhood, whenever I played games, I kept asking myself, “How does this system work?” Today, I no longer stop at understanding systems — I design my own and turn ideas into working products.</p>
       </div>
       <div class="phil-card fade-in">
         <div class="phil-label"><span data-tr>Güvenilirlik</span><span data-en>Reliability</span></div>
-        <p class="phil-text" data-tr>Açık arıza modları, savunmacı arayüzler ve test edilebilir varsayımlar. Net sözleşmeler, güçlü telemetri, deterministik test senaryoları.</p>
-        <p class="phil-text" data-en>Explicit failure modes, defensive interfaces, and testable assumptions. Clear contracts, robust telemetry, deterministic test scenarios.</p>
+        <p class="phil-text" data-tr>Disiplinli çalışmayı temel ilke olarak görürüm. Varsayımlar yerine test edilmiş sonuçları tercih ederim. Açık arayüzler, net veri akışı ve tekrar üretilebilir test senaryoları benim için standarttır. Bir sistemin davranışı sürpriz değil, ölçülebilir ve öngörülebilir olmalıdır.</p>
+        <p class="phil-text" data-en>I treat discipline as a fundamental principle. I prefer validated results over assumptions. Clear interfaces, transparent data flow, and reproducible test scenarios are my standard. A system’s behavior should not be a surprise; it should be measurable and predictable.</p>
       </div>
       <div class="phil-card fade-in">
         <div class="phil-label"><span data-tr>Mimari</span><span data-en>Architecture</span></div>
-        <p class="phil-text" data-tr>Basit sınırlar, iyi tanımlanmış güncelleme döngüleri, ölçeklenebilir pipeline'lar. Sensörlerin, özerkliğin ve etkileşimli UX'in gerçek zamanlı buluştuğu sistemler.</p>
-        <p class="phil-text" data-en>Simple boundaries, well-defined update loops, scalable pipelines. Systems where sensors, autonomy, and interactive UX meet in real time.</p>
+        <p class="phil-text" data-tr>Basit ve okunabilir sistemler kurarım. Gereksiz karmaşıklık yerine ölçeklenebilir ve sürdürülebilir yapı oluşturmak önceliğimdir. Sensör verisi, gerçek zamanlı işleme ve kullanıcı deneyimi uyum içinde çalışmalıdır. Düzenli kod, düzenli düşüncenin doğal sonucudur.</p>
+        <p class="phil-text" data-en>I build simple and readable systems. Instead of unnecessary complexity, I prioritize scalable and sustainable structures. Sensor data, real-time processing, and user experience should operate in harmony. Clean code is the natural outcome of structured thinking.</p>
       </div>
     </div>
   </div>
