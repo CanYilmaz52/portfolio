@@ -909,6 +909,47 @@
       <div class="project-card fade-in">
         <div class="card-header">
           <div>
+            <span data-tr>Kamikaze Algoritmaları</span>
+            <span data-en>Kamikaze Algorithms</span>
+            <h3 class="card-title">
+              <span data-tr>Otonom Hedefe Yönelim ve Güdüm Algoritmaları</span>
+              <span data-en>Autonomous Target Guidance and Guidance Algorithms</span>
+            </h3>
+          </div>
+          <div class="card-num">02</div>
+        </div>
+        <p class="card-desc" data-tr>
+          FlightGear + ArduPilot SITL + JSBSim ortamında, Python/pymavlink kullanarak sabit kanatlı İHA için LOS ve ProNav tabanlı otonom hedef takip, yönelme ve hassas yaklaşma sistemi geliştirdim; FSM, hedef konum/hız kestirimi, PID optimizasyonu ve gerçek zamanlı UDP telemetrisi ile yaklaşma hassasiyetini 300–900 m’den 13–30 m seviyesine iyileştirdim.
+        </p>
+        <p class="card-desc" data-en>
+          Developed an autonomous target tracking, guidance, and precision approach system for a fixed-wing UAV in FlightGear + ArduPilot SITL + JSBSim using Python/pymavlink, implementing LOS and ProNav guidance, FSM-based flight phases, target position/velocity prediction, PID optimization, and real-time UDP telemetry, improving approach accuracy from 300–900 m to 13–30 m.
+        </p>
+        <ul class="card-highlights">
+          <li><span data-tr>FlightGear + ArduPilot SITL + JSBSim simülasyon ortamında, sabit kanatlı bir İHA için otonom hedef tespiti, yönelme ve hassas yaklaşma manevraları gerçekleştiren bir kontrol sistemi geliştirdim; Python ve pymavlink ile CRUISE → ALIGN → ROLL_OUT → DIVE fazlarından oluşan bir durum makinesi (FSM) tasarladım.</span><span data-en>Developed a control system for a fixed-wing UAV in a FlightGear + ArduPilot SITL + JSBSim simulation environment, enabling autonomous target detection, guidance, and precision approach maneuvers. Designed a Python/pymavlink-based Finite State Machine (FSM) consisting of CRUISE → ALIGN → ROLL_OUT → DIVE phases.</span></li>
+          <li><span data-tr>Line-of-Sight (LOS) tabanlı sürekli açı takibi ve Proportional Navigation (ProNav) güdüm algoritmalarını uyguladım; hedef hız tahmini ve gelecekteki konum kestirimi (lead-time prediction) ile kapanma hızına dayalı dinamik zamanlama geliştirdim.</span><span data-en>Implemented continuous Line-of-Sight (LOS) angle tracking and Proportional Navigation (ProNav) guidance algorithms. Added target velocity estimation and lead-time prediction to enable dynamic timing based on closing velocity.</span></li>
+          <li><span data-tr>PID kontrolcülerdeki osilasyon problemlerini low-pass rate filtreleme ve faz-bazlı kazanç ayarlamalarıyla çözdüm; sabit hedefe yaklaşma hassasiyetini 300-900m seviyesinden 13 30m seviyesine indirdim.</span><span data-en>Resolved PID controller oscillation issues through low-pass rate filtering and phase based gain tuning, improving fixed-target approach accuracy from approximately 300 900 m to 13–30 m.</span></li>
+          <li><span data-tr>Telemetri veri akışını, ilk aşamadaki Telnet tabanlı senkron okumadan (~1Hz) FlightGear native UDP protokolüne geçirerek ~20Hz gerçek zamanlı, düşük gecikmeli hale getirdim.</span><span data-en>Reworked the telemetry data pipeline from an initial Telnet-based synchronous approach (~1 Hz) to FlightGear's native UDP protocol, achieving approximately 20 Hz real time communication with lower latency.</span></li>
+          <li><span data-tr>JSBSim uçuş dinamiği modelinde eksik aerodinamik stabilite türevlerini (Clp, Cmq, Cnr, Cmalpha, Clbeta, Cnbeta) tanımlayarak uçağın doğal kararlılığını sağladım; Euler açısı tekilliği, rudder-roll aerodinamik kuplajı ve LOS hesaplama tekilliği gibi kök nedenleri tespit edip feed-forward kompanzasyon ve kademeli kazanç geçişleriyle çözdüm.</span><span data-en>Defined missing aerodynamic stability derivatives (Clp, Cmq, Cnr, Cmalpha, Clbeta, Cnbeta) in the JSBSim flight dynamics model to improve the aircraft's natural stability. Identified and addressed root causes including Euler-angle singularities, rudder-roll aerodynamic coupling, and LOS calculation singularities using feed-forward compensation and gradual gain transitions.</span></li>
+          <li><span data-tr>Blender'da 3D hedef modeli hazırlayıp FlightGear AI senaryo sistemine entegre ettim; ArduPilot SITL parametre ve motor/frame konfigürasyonlarını (plane-jet frame, AUTOTUNE) uçuş performans hedeflerine göre optimize ettim.</span><span data-en>Created a 3D target model in Blender and integrated it into FlightGear's AI scenario system. Optimized ArduPilot SITL parameters and engine/frame configurations, including the plane-jet frame and AUTOTUNE settings, based on flight performance requirements</span></li>
+        </ul>
+        <div class="card-stack">
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">FlightGear</span>
+          <span class="stack-tag">MAVLink</span>
+          <span class="stack-tag">Kamikaze</span>
+          <span class="stack-tag">Guidance Algorithms</span>
+        </div>
+          <div class="card-media">
+              <img src="DivePhoto.png" alt="Project preview">
+            </div>
+        <div class="card-links">
+          <a href="https://drive.google.com/file/d/15o9vk07hlMzBe_XQVWSlmqEzkcaserSa/view?usp=sharing" target="_blank" class="card-link">▶ Dive Photo</a>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="card-header">
+          <div>
             <span data-tr>Oyun Geliştirme</span>
             <span data-en>Game Development</span>
             <h3 class="card-title">
@@ -1243,6 +1284,7 @@
           <li>FlightGear · JSBSim</li>
           <li>SITL architectures</li>
           <li>MAVLink · MissionPlanner</li>
+          <li>Guidance Algorithms</li>
           <li><span data-tr>Uçuş Sonlandırma Algoritması (FTA)</span><span data-en>Flight Termination Algorithm (FTA)</span></li>
           <li><span data-tr>Telemetri ve log analizi</span><span data-en>Telemetry and log analysis</span></li>
         </ul>
@@ -1270,7 +1312,7 @@
         <ul class="skill-list">
           <li><span data-tr>İngilizce · B2</span><span data-en>English · B2</span></li>
           <li><span data-tr>Almanca · A1</span><span data-en>German · A1</span></li>
-          <li><span data-tr>Çince · A1</span><span data-en>Chinese · A1</span></li>
+          <li><span data-tr>Japonca · A1</span><span data-en>Japanese · A1</span></li>
         </ul>
       </div>
       <div class="skill-block fade-in" style="grid-column: 1 / -1;">
@@ -1389,7 +1431,10 @@
         <span data-tr>Oyun Geliştirme</span><span data-en>Game Dev</span>
       </button>
       <button class="gallery-tab" onclick="switchTab('cv', this)">
-        Computer Vision &amp; AI
+        Computer VISION &amp; AI
+      </button>
+      <button class="gallery-tab" onclick="switchTab('guidance', this)">
+        GUIDANCE &amp; Autonomous Algorithms
       </button>
       <button class="gallery-tab" onclick="switchTab('sim', this)">
         <span data-tr>Simülasyon</span><span data-en>Simulation</span>
@@ -1528,6 +1573,15 @@
           </div>
         </div>
 
+        <!-- guidance -->
+        <div class="gallery-item" data-cat="guidance" onclick="openLightbox(this)" data-caption="Autonomous Target Guidance and Guidance Algorithms">
+          <img src="DivePhoto.png" alt="Guidance & Autonomous" onerror="this.src='https://placehold.co/800x450/111118/00e5ff?text=Guidance+Autonomous'">
+          <div class="gallery-item-overlay">
+            <div class="gallery-item-label">Guidance Algorithms</div>
+            <div class="gallery-item-title">Kamikaze</div>
+          </div>
+        </div>
+
         <!-- sim -->
         <div class="gallery-item" data-cat="sim" onclick="openLightbox(this)" data-caption="FlightGear + ArduPilot SITL Simulation">
           <img src="flightgear+sitl.png" alt="FlightGear SITL" onerror="this.src='https://placehold.co/800x450/111118/00e5ff?text=FlightGear+SITL'">
@@ -1625,9 +1679,10 @@
       </div>
     </div>
 
-    <!-- Filtered panels (game / cv / sim / gcs) — JS fills these -->
+    <!-- Filtered panels (game / cv / guidance / sim / gcs) — JS fills these -->
     <div class="gallery-panel" id="panel-game"><div class="gallery-grid" id="grid-game"></div></div>
     <div class="gallery-panel" id="panel-cv"><div class="gallery-grid" id="grid-cv"></div></div>
+    <div class="gallery-panel" id="panel-guidance"><div class="gallery-grid" id="grid-guidance"></div></div>
     <div class="gallery-panel" id="panel-sim"><div class="gallery-grid" id="grid-sim"></div></div>
     <div class="gallery-panel" id="panel-gcs"><div class="gallery-grid" id="grid-gcs"></div></div>
 
